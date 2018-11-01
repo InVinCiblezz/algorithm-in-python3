@@ -32,6 +32,7 @@ def dfs(x):
         if not vis[y]:
             vis[y] = True
             if mc[y] == 0 or dfs(mc[y]):
+                mc[x] = y
                 mc[y] = x
                 return True
         i = e[i].next
